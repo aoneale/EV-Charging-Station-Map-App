@@ -1,0 +1,127 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.cs160_prog2b"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature
+11-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:5:5-7:35
+12        android:glEsVersion="0x00020000"
+12-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:6:9-41
+13        android:required="true" />
+13-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:7:9-32
+14
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:9:5-79
+15-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:9:22-76
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:10:5-67
+16-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:10:22-64
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Include required permissions for Google Maps API to run. -->
+17-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:10:5-76
+17-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:10:22-73
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4882c64b33418d4d6e2bb0cb7ae334e3\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4882c64b33418d4d6e2bb0cb7ae334e3\play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+19
+20    <application
+20-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:12:5-42:19
+21        android:allowBackup="true"
+21-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:13:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:14:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:15:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:16:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:17:9-35
+28        android:theme="@style/AppTheme" >
+28-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:18:9-40
+29        <activity
+29-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:19:9-27:20
+30            android:name="com.example.cs160_prog2b.StationDetailsActivity"
+30-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:20:13-51
+31            android:label="@string/title_activity_station_details"
+31-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:21:13-67
+32            android:parentActivityName="com.example.cs160_prog2b.MainActivity"
+32-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:22:13-55
+33            android:theme="@style/AppTheme.NoActionBar" >
+33-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:23:13-56
+34            <meta-data
+34-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:24:13-26:73
+35                android:name="android.support.PARENT_ACTIVITY"
+35-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:25:17-63
+36                android:value="com.example.cs160_prog2b.MainActivity" />
+36-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:26:17-70
+37        </activity>
+38        <activity android:name="com.example.cs160_prog2b.MainActivity" >
+38-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:28:9-34:20
+38-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:28:19-47
+39            <intent-filter>
+39-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:29:13-33:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:30:17-69
+40-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:30:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:32:17-77
+42-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:32:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <meta-data
+46-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:36:9-38:71
+47            android:name="com.google.android.geo.API_KEY"
+47-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:37:13-58
+48            android:value="AIzaSyBPNvmHksoWV2yEJDKc4e00LSheQQrcgTo" />
+48-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:38:13-68
+49        <meta-data
+49-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:39:9-41:69
+50            android:name="com.google.android.gms.version"
+50-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:40:13-58
+51            android:value="@integer/google_play_services_version" />
+51-->C:\Users\Owner\Documents\Berkeley\UC Berkeley\Fall 2019\CS260A - User Interface Design and Development\CS160_Prog2B\app\src\main\AndroidManifest.xml:41:13-66
+52        <!-- Autocomplete -->
+53        <activity
+53-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:16:9-23:20
+54            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+54-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:17:13-91
+55            android:exported="false"
+55-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:18:13-37
+56            android:hardwareAccelerated="true"
+56-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:19:13-47
+57            android:label="@string/places_autocomplete_label"
+57-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:20:13-62
+58            android:theme="@style/PlacesAutocompleteThemeOverlay"
+58-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:21:13-66
+59            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" >
+59-->[com.google.android.libraries.places:places:2.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c73ff3f70235488cad9c984963d8005c\places-2.0.0\AndroidManifest.xml:22:13-71
+60        </activity> <!-- Needs to be explicitly declared on P+ -->
+61        <uses-library
+61-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4882c64b33418d4d6e2bb0cb7ae334e3\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+62            android:name="org.apache.http.legacy"
+62-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4882c64b33418d4d6e2bb0cb7ae334e3\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+63            android:required="false" />
+63-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4882c64b33418d4d6e2bb0cb7ae334e3\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+64
+65        <activity
+65-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\bd8a4935a17dde33dc1d62d4f9914d3b\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+66            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+66-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\bd8a4935a17dde33dc1d62d4f9914d3b\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+67            android:exported="false"
+67-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\bd8a4935a17dde33dc1d62d4f9914d3b\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+68            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+68-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\bd8a4935a17dde33dc1d62d4f9914d3b\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+69    </application>
+70
+71</manifest>

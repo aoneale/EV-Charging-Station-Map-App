@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#757575</color>
+    <color name="colorAccent">#add681</color>
+
+    // Grays
+    <color name="lightGray">#EEEEEE</color>
+    <color name="darkGray">#BCBCBC</color>
+    <color name="textColor">#303030</color>
+    <color name="grayText">#727272</color>
+
+    // Greens
+    <color name="midGreen">#ADD681</color>
+    <color name="darkGreen">#7CA453</color>
+    <color name="lightGreen">#D3ECAD</color>
+    <color name="darkerGreen">#598C26</color>
+    <color name="not_as_light_gray">#C7C6C6</color>
+
+</resources>

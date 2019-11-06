@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="415dp"
+        android:layout_height="56dp"
+        android:background="#EEEEEE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/midGreen"
+        android:onClick="changeLocation"
+        android:text="@string/searchButton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/SearchbyAddress"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#E6EEEEEE"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="42dp"
+        android:paddingEnd="16dp"
+        android:text="@string/searchBox"
+        android:textColor="@color/grayText"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toStartOf="@+id/SearchButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/search_icon_gray"
+        app:layout_constraintStart_toStartOf="@+id/SearchbyAddress"
+        app:layout_constraintTop_toTopOf="@+id/SearchbyAddress" />
+
+    <View
+        android:id="@+id/bottomInfo"
+        android:layout_width="0dp"
+        android:layout_height="198dp"
+        android:background="#EEEEEE"
+        android:onClick="goToStationView"
+        android:tag="mapOverlayInfo"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/carName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/batteryMiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editCarButton"
+        app:layout_constraintEnd_toStartOf="@+id/miles" />
+
+    <TextView
+        android:id="@+id/editCarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:onClick="selectVehicle"
+        android:text="@string/Edit"
+        android:textColor="@color/darkerGreen"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/carName"
+        app:layout_constraintStart_toEndOf="@+id/carName" />
+
+    <TextView
+        android:id="@+id/miles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/miles"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        app:layout_constraintBaseline_toBaselineOf="@+id/batteryMiles"
+        app:layout_constraintEnd_toStartOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/stationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomInfo"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stationName"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/minToGetThere"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textColor="@color/darkerGreen"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/address"
+        app:layout_constraintEnd_toEndOf="@+id/bottomInfo"
+        app:layout_constraintStart_toEndOf="@+id/address"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/availability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/availability"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/kW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/timeToCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:tag="mapOverlayInfo"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kW"
+        app:layout_constraintStart_toEndOf="@+id/kW"
+        tools:visibility="invisible" />
+
+    <View
+        android:id="@+id/shadowOverlay"
+        android:layout_width="420dp"
+        android:layout_height="660dp"
+        android:background="#CCbcbcbc"
+        android:backgroundTintMode="src_over"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="invisible" />
+
+    <View
+        android:id="@+id/popup"
+        android:layout_width="350dp"
+        android:layout_height="540dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="68dp"
+        android:background="@color/lightGray"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/SelectYourVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/SelectYourVehicle"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/popup"
+        app:layout_constraintStart_toStartOf="@+id/popup"
+        app:layout_constraintTop_toTopOf="@+id/popup"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/NissanLeafButton"
+        android:layout_width="138dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/darkGreen"
+        android:drawableTop="@mipmap/nissan_logo"
+        android:onClick="updateCurrentCarSelection"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:tag="0"
+        android:text="@string/NissanLeaf"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/popup"
+        app:layout_constraintTop_toBottomOf="@+id/SelectYourVehicle"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/RenaultButton"
+        android:layout_width="138dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/white"
+        android:drawableTop="@mipmap/renault_logo_white"
+        android:onClick="updateCurrentCarSelection"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:tag="1"
+        android:text="@string/Renault"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/popup"
+        app:layout_constraintTop_toBottomOf="@+id/SelectYourVehicle"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/volkswagenButton"
+        android:layout_width="138dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/white"
+        android:drawableTop="@mipmap/volkswagen_logo_white"
+        android:onClick="updateCurrentCarSelection"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:tag="2"
+        android:text="@string/Volkswagen"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/popup"
+        app:layout_constraintStart_toStartOf="@+id/popup"
+        app:layout_constraintTop_toBottomOf="@+id/RenaultButton"
+        tools:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/lightGray"
+        android:onClick="cancelVehicleChange"
+        android:src="@drawable/close_x"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/popup"
+        app:layout_constraintTop_toTopOf="@+id/popup"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/saveVehicle"
+        android:layout_width="116dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/midGreen"
+        android:onClick="saveVehicle"
+        android:text="@string/Save"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volkswagenButton"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ibattery"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dragBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/drag"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomInfo"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
