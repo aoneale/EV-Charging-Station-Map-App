@@ -349,8 +349,9 @@
                             android:id="@+id/imageView5"
                             android:layout_width="18dp"
                             android:layout_height="18dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="9dp"
                             android:duplicateParentState="true"
+                            android:foreground="@drawable/star_3307yellow"
                             app:srcCompat="@drawable/star_3307yellow" />
 
                         <Space
@@ -395,6 +396,7 @@
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
                     android:duplicateParentState="true"
+                    android:foreground="@drawable/star_3307yellow"
                     app:srcCompat="@drawable/star_3307yellow" />
 
                 <Space
