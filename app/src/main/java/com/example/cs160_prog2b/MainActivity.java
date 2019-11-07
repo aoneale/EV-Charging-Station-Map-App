@@ -712,7 +712,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         System.out.println(input);
 
-        if (input.toLowerCase().equals("current location")) {
+        if (input.toLowerCase().trim().equals("current location")) {
             getDeviceLocation();
         } else {
 
