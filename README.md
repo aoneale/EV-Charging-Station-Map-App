@@ -7,6 +7,7 @@
 
 MAP-E is an Android mobile app that helps owners of electric vehicles find nearby charging stations. The app makes use of Google's Maps SDK for Android, Places SDK for Android, and Geocoding API to display a map with nearby stations and provide details about each station. 
 
+![alt text](files/Slide1.PNG "Title")
 ![alt text](files/Slide2.PNG "Map")
 ![alt text](files/Slide3.PNG "Car and Battery")
 ![alt text](files/Slide4.PNG "Selecting a Station")
